@@ -22,14 +22,14 @@ namespace FishScale.Controllers
                 FreeRam = 4000, 
                 UsedRam = 2000 
             };
-            ViewData["Nome"] = cliente.Nome;
-            ViewData["ClienteId"] = cliente.ClienteId;
-            ViewData["MaquinaId"] = cliente.MaquinaId;
-            ViewData["SistemaOperacional"] = cliente.SistemaOperacional;
-            ViewData["FreeHD"] = cliente.FreeHD;
-            ViewData["UsedHD"] = cliente.UsedHD;
-            ViewData["FreeRam"] = cliente.FreeRam;
-            ViewData["UsedRam"] = cliente.UsedRam;
+            ViewBag.Nome = cliente.Nome;
+            ViewBag.ClienteId = cliente.ClienteId;
+            ViewBag.MaquinaId = cliente.MaquinaId;
+            ViewBag.SistemaOperacional = cliente.SistemaOperacional;
+            ViewBag.FreeHD = cliente.FreeHD;
+            ViewBag.UsedHD = cliente.UsedHD;
+            ViewBag.FreeRam = cliente.FreeRam;
+            ViewBag.UsedRam = cliente.UsedRam;
             
 
             return View(); // Para Criar uma VIEW Empty(whitout Model) e deixar selecionado Use a Layout Page
