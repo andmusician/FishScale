@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - FishScale Monitoração</title>
+    <title>FishScale - Monitoring Anything</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -30,7 +30,7 @@
         </div>
     </div>
     <div class="container body-content">
-        @RenderBody()
+        @RenderBody() @*Tag que adiciona todo o conteudo que eu tenho em HTML dentro das VIEWS*@
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - FishScale </p>
