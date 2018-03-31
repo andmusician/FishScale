@@ -1,4 +1,5 @@
 ﻿using FishScale.Models;
+using System.Data.SqlClient;
 using System.Web.Mvc;
 
 
@@ -11,9 +12,24 @@ namespace FishScale.Controllers
             // Criando um objeto do tipo Cliente da Model
             // IMPORTANTE: OS VALORES DAS VARIÁVEIS SERÃO CHAMADOS DO SQL SERVER
 
+            SqlConnection minhaconexao = new SqlConnection("Server=tcp:domotichouse.database.windows.net,1433; Database=fishscale; Initial Catalog=Domotic;Persist Security Info=False;User ID=andmusician;Password=mficbr100%;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+
+            minhaconexao.Open();
+
+            string strQuerySelect = "SELECT * FROM FISHSCALE";
+            SqlCommand cmdComandoSelect = new SqlCommand(strQuerySelect, minhaconexao);
+            SqlDataReader dados = cmdComandoSelect.ExecuteReader();
+
+            while (dados.Read())
+            {
+                System.Console.WriteLine($"clienteid:{0}, nome:{1}, maquinaid:{2}, sistemaoperacional:{3}, freehd: {4}, usedhd: {5}, freeram: {6}, usedram: {7}, dataview: {8}", dados["clienteid"], dados["nome"], dados["maquinaid"], dados["sistemaoperacional"], dados["freehd"], dados["usedhd"], dados["freeram"], dados["usedram"], dados["dataview"]);
+            }
+            
+
+
             var cliente = new Cliente 
             {
-                Nome = "BandTec", 
+                Nome = "Bandtec", 
                 ClienteId = 1, 
                 MaquinaId = 1, 
                 SistemaOperacional = "Windows", 
@@ -34,5 +50,14 @@ namespace FishScale.Controllers
 
             return View(); // Para Criar uma VIEW Empty(whitout Model) e deixar selecionado Use a Layout Page
         }
+        
+        //Definir um método que busca o cliente pelo Nome e retorna seus dados na tela
+        //[HttpPost]
+        //public ActionResult NomeCliente(string NomeCliente)
+        //{
+        //    ViewBag.Nome = NomeCliente;
+
+        //    return View();
+        //}
     }
 }
