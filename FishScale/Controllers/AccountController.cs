@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using FishScale.Models;
+using System.Web.Configuration;
 
 namespace FishScale.Controllers
 {
@@ -20,6 +21,8 @@ namespace FishScale.Controllers
 
         public AccountController()
         {
+            
+
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
