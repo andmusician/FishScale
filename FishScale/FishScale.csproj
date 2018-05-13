@@ -278,10 +278,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Cliente\ObterClientes.cshtml" />
+    <Content Include="Views\Cliente\IncluirCliente.cshtml" />
+    <Content Include="Views\Cliente\EditarCliente.cshtml" />
+    <Content Include="Views\Cliente\ExcluirCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Cliente\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
