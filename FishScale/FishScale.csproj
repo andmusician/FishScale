@@ -205,6 +205,7 @@
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MaquinaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -282,6 +283,10 @@
     <Content Include="Views\Cliente\IncluirCliente.cshtml" />
     <Content Include="Views\Cliente\EditarCliente.cshtml" />
     <Content Include="Views\Cliente\ExcluirCliente.cshtml" />
+    <Content Include="Views\Maquina\ObterMaquinas.cshtml" />
+    <Content Include="Views\Maquina\IncluirMaquina.cshtml" />
+    <Content Include="Views\Maquina\EditarMaquina.cshtml" />
+    <Content Include="Views\Maquina\ExcluirMaquina.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

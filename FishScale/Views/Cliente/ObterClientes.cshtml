@@ -1,5 +1,8 @@
 ﻿@model IEnumerable<FishScale.Models.Cliente>
 
+<h2>Lista de Clientes</h2>
+
+
 <p>
     @Html.ActionLink("Adicionar Novo Cliente", "IncluirCliente")
 </p>
@@ -20,25 +23,26 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.QtdeMaquinas)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NomeCliente)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AlertaHD)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AlertaRam)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "EditarCliente", new { id=item.ClienteID }) |
-            @Html.ActionLink("Excluir", "ExcluirCliente", new { id=item.ClienteID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.QtdeMaquinas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AlertaHD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AlertaRam)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "EditarCliente", new { id = item.ClienteID }) |
+                @Html.ActionLink("Excluir", "ExcluirCliente", new { id = item.ClienteID })
+            </td>
+        </tr>
+    }
 
 </table>
