@@ -1,11 +1,9 @@
-﻿using System;
+﻿using FishScale.Models;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using FishScale.Models;
 
 
 namespace FishScale.Repositorio
@@ -17,7 +15,7 @@ namespace FishScale.Repositorio
         private void Connection()
         {
             string construtor = ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString();
-            conn1 = new SqlConnection();
+            conn1 = new SqlConnection(construtor);
         }
 
         public bool AdicionarCliente(Cliente clienteObj)
