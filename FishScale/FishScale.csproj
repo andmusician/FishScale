@@ -206,6 +206,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MaquinaController.cs" />
+    <Compile Include="Controllers\MonitoracaoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -287,6 +288,7 @@
     <Content Include="Views\Maquina\IncluirMaquina.cshtml" />
     <Content Include="Views\Maquina\EditarMaquina.cshtml" />
     <Content Include="Views\Maquina\ExcluirMaquina.cshtml" />
+    <Content Include="Views\Monitoracao\Monitoracao.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
