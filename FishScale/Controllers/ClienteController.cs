@@ -8,11 +8,11 @@ using System.Web.Mvc;
 
 namespace FishScale.Controllers
 {
+    [Authorize]
     public class ClienteController : Controller
     {
         private ClienteRepositorio _repositorio;
         
-        // GET: Cliente
         public ActionResult ObterClientes()
         {
             _repositorio = new ClienteRepositorio();

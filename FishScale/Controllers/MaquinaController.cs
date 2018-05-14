@@ -8,11 +8,11 @@ using System.Web.Mvc;
 
 namespace FishScale.Controllers
 {
+    [Authorize]
     public class MaquinaController : Controller
     {
         private MaquinaRepositorio _repositorio;
-
-        // GET: Maquina
+        
         public ActionResult ObterMaquinas()
         {
             _repositorio = new MaquinaRepositorio();
@@ -20,7 +20,7 @@ namespace FishScale.Controllers
 
             return View(_repositorio.ObterMaquinas());
         }
-
+                
         public ActionResult IncluirMaquina()
         {
             return View();
@@ -48,7 +48,7 @@ namespace FishScale.Controllers
             }
 
         }
-
+                
         public ActionResult EditarMaquina(int id)
         {
             _repositorio = new MaquinaRepositorio();
