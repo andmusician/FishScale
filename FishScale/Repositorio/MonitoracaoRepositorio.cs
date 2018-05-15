@@ -23,7 +23,7 @@ namespace FishScale.Repositorio
 
             List<Monitoracao> MonitoracaoList = new List<Monitoracao>();
 
-            using (SqlCommand command = new SqlCommand("ObterMonitoracao", conn1))
+            using (SqlCommand command = new SqlCommand("ObterMonitoracaoDesc", conn1))
             {
                 command.CommandType = CommandType.StoredProcedure;
 

@@ -17,6 +17,7 @@ namespace FishScale.Controllers
             _repositorio = new MonitoracaoRepositorio();
             ModelState.Clear();
 
+            Response.AddHeader("Refresh", "5");
             return View(_repositorio.ObterMonitoracao());
         }
     }
