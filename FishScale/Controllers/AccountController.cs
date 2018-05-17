@@ -82,14 +82,14 @@ namespace FishScale.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToRoute(new { controller = "Monitoracao", action = "Monitoracao"}); //Action que será direcionada caso Login seja efetuado com sucesso. 
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
+                    ModelState.AddModelError("", "Tentativa de Login Inválida.");
                     return View(model);
             }
         }

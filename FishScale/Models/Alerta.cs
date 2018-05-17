@@ -12,5 +12,6 @@ namespace FishScale.Models
         public double AlertaRAM { get; set; }
         public int MaquinaID { get; set; }
         public int ClienteID { get; set; }
+        public DateTime Hora { get; set; }
     }
 }

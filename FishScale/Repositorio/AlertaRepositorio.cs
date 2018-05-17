@@ -17,6 +17,8 @@ namespace FishScale.Repositorio
 
         private const string SelectAlertaRAMCliente = "SELECT AlertaRAM FROM Cliente";
 
+        //criar INSERT
+
         private SqlConnection conn1;
 
         private void Connection()
@@ -31,7 +33,7 @@ namespace FishScale.Repositorio
 
             conn1.Open();
 
-            //double[] dadosAlertaHD = new double[];
+            //MÉTODO QUE PEGA OS DADOS DE HD DA TABELA DE MONITORAÇÃO, CALCULA A PORCENTAGEM DE USO E INSERE EM UMA LISTA.
             List<double> dadosAlertaHD = new List<double>();
             
             using (SqlCommand command = new SqlCommand(SelectPorcentagemHD, conn1))
@@ -40,13 +42,42 @@ namespace FishScale.Repositorio
 
                 while (reader.Read())
                 {
-                    var dados = new Alerta
+                    var dadosHD = new Alerta
                     {
                         AlertaHD = reader.GetDouble(0)
                     };
 
-                    //dados.AlertaHD = reader.GetDouble(0);
-                    dadosAlertaHD.Add(dados.AlertaHD);                    
+                    //dados.AlertaHD = reader.GetDouble(0); OBS: PODE SER UTILIZADO NO LUGAR DO BLOCO ACIMA.
+                    dadosAlertaHD.Add(dadosHD.AlertaHD);                    
+                }
+            }
+
+            //MÉTODO QUE PEGA OS DADOS DE RAM DA TABELA DE MONITORAÇÃO, CALCULA A PORCENTAGEM DE USO E INSERE EM UMA LISTA.
+            List<double> dadosAlertaRAM = new List<double>();
+
+            using (SqlCommand command = new SqlCommand(SelectPorcentagemRAM, conn1))
+            {
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var dadosRAM = new Alerta
+                    {
+                        AlertaRAM = reader.GetDouble(0)
+                    };
+
+                    dadosAlertaRAM.Add(dadosRAM.AlertaRAM);
+                }
+            }
+            
+            for (int i = 0; i < dadosAlertaRAM.Count; i++)
+            {
+                if (dadosAlertaRAM[i] > dadosAlertaHD[i]) //Inserir Alerta HD Cliente pelo id do Cliente. 
+                {
+                    using (SqlCommand command = new SqlCommand("Insert into Alerta", conn1))
+                    {
+                        i = command.ExecuteNonQuery();
+                    }                    
                 }
             }
         }
@@ -73,7 +104,8 @@ namespace FishScale.Repositorio
                         AlertaHD = Convert.ToDouble(reader["AlertaHD"]),
                         AlertaRAM = Convert.ToDouble(reader["AlertaRAM"]),
                         MaquinaID = Convert.ToInt32(reader["MaquinaID"]),
-                        ClienteID = Convert.ToInt32(reader["ClienteID"])
+                        ClienteID = Convert.ToInt32(reader["ClienteID"]),
+                        Hora = Convert.ToDateTime(reader["Hora"])
                     };
 
                     AlertasList.Add(Clientes);
