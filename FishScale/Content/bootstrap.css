@@ -36,6 +36,13 @@ summary {
   display: block;
 }
 
+imagemDeFundo {
+    border: 1px solid black;
+    background: url('https://news.rambler.ru/img/2018/01/12170008.900459.3111.jpeg') no-repeat;
+    width: auto;
+    height: 400px;
+}
+
 audio,
 canvas,
 video {
