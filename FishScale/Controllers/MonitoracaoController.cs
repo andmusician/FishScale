@@ -20,5 +20,17 @@ namespace FishScale.Controllers
             Response.AddHeader("Refresh", "5");
             return View(_repositorio.ObterMonitoracao());
         }
+
+        private AlertaRepositorio _repositorio1;
+
+        public ActionResult ObterAlertas()
+        {
+            _repositorio1 = new AlertaRepositorio();
+            ModelState.Clear();
+
+            Response.AddHeader("Refresh", "5");
+            return View(_repositorio1.ObterAlertas());
+        }
+
     }
 }

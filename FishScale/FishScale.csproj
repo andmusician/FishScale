@@ -202,7 +202,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AlertasController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -292,7 +291,7 @@
     <Content Include="Views\Maquina\EditarMaquina.cshtml" />
     <Content Include="Views\Maquina\ExcluirMaquina.cshtml" />
     <Content Include="Views\Monitoracao\Monitoracao.cshtml" />
-    <Content Include="Views\Alertas\ObterAlertas.cshtml" />
+    <Content Include="Views\Monitoracao\ObterAlertas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
