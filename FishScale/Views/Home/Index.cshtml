@@ -2,11 +2,32 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/Content/banner.jpg" alt="ASP.NET" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p class="lead">Monitoramento para qualquer tipo de infraestrutura de TI, serviços, aplicativos e recursos</p>
+                <p>
+                    
+                    <a class="btn btn-default" href="#">
+                        Explore a Plataforma
+                    </a>
+                </p>
+            </div>
+        </div>      
+       
+       
+    </div>
+   
+</div>
+
+@*<div class="jumbotron">
     <h1></h1>
     <p class="lead">Soluções para qualquer tipo de infraestrutura de TI, serviços, aplicativos, recursos</p>
     <p><a href="https://fishscale.azurewebsites.net/" class="btn btn-primary btn-lg">Explore a Plataforma &raquo;</a></p>
-</div>
+</div>*@
 
 <div class="row">
     <div class="col-md-4">
