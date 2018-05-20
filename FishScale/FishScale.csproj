@@ -202,21 +202,42 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlertasController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MaquinaController.cs" />
     <Compile Include="Controllers\MonitoracaoController.cs" />
+    <Compile Include="Controllers\MonitoracoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Alerta.cs" />
+    <Compile Include="Models\Alerta.cs">
+      <DependentUpon>RestApi.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Maquina.cs" />
-    <Compile Include="Models\Monitoracao.cs" />
+    <Compile Include="Models\Monitoracao.cs">
+      <DependentUpon>RestApi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RestApi.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RestApi.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RestApi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RestApi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RestApi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RestApi.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\AlertaRepositorio.cs" />
     <Compile Include="Repositorio\ClienteRepositorio.cs" />
@@ -232,10 +253,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\RestApi.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RestApi.edmx</DependentUpon>
+      <LastGenOutput>RestApi.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\RestApi.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RestApi.edmx</DependentUpon>
+      <LastGenOutput>RestApi.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\RestApi.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RestApi.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\RestApi.edmx.diagram">
+      <DependentUpon>RestApi.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\fishscale - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

@@ -48,7 +48,7 @@ namespace FishScale.Repositorio
                     };
 
                     //dados.AlertaHD = reader.GetDouble(0); OBS: PODE SER UTILIZADO NO LUGAR DO BLOCO ACIMA.
-                    dadosAlertaHD.Add(dadosHD.AlertaHD);                    
+                    dadosAlertaHD.Add(dadosHD.AlertaHD.Value);                    
                 }
             }
 
@@ -66,7 +66,7 @@ namespace FishScale.Repositorio
                         AlertaRAM = reader.GetDouble(0)
                     };
 
-                    dadosAlertaRAM.Add(dadosRAM.AlertaRAM);
+                    dadosAlertaRAM.Add(dadosRAM.AlertaRAM.Value);
                 }
             }
             
