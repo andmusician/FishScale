@@ -22,7 +22,7 @@ namespace FishScale.Controllers
 
         public ActionResult Contato()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "";
 
             return View();
         }
