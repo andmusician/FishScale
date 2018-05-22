@@ -204,6 +204,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlertasController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\GraphController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MaquinaController.cs" />
@@ -331,6 +332,7 @@
     <Content Include="Views\Maquina\ExcluirMaquina.cshtml" />
     <Content Include="Views\Monitoracao\Monitoracao.cshtml" />
     <Content Include="Views\Monitoracao\ObterAlertas.cshtml" />
+    <Content Include="Views\Graph\Graficos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
