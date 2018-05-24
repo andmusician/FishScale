@@ -22,5 +22,6 @@ namespace FishScale.Models
         public Nullable<System.DateTime> Hora { get; set; }
         public Nullable<int> MaquinaID { get; set; }
         public Nullable<int> ClienteID { get; set; }
+        public double Porcentagem { get; set; }
     }
 }

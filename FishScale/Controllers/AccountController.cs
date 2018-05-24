@@ -82,7 +82,7 @@ namespace FishScale.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToRoute(new { controller = "Monitoracao", action = "Monitoracao"}); //Action que será direcionada caso Login seja efetuado com sucesso. 
+                    return View();//RedirectToRoute(new { controller = "Monitoracao", action = "Monitoracao"}); //Action que será direcionada caso Login seja efetuado com sucesso. 
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
