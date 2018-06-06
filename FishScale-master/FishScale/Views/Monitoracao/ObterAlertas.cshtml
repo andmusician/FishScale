@@ -1,0 +1,47 @@
+﻿@model IEnumerable<FishScale.Models.Alerta>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+
+<h3>Alertas em Tempo Real</h3>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AlertaHD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlertaRAM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaquinaID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClienteID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlertaHD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlertaRAM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaquinaID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClienteID)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AlertaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AlertaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AlertaID })
+        </td>*@
+    </tr>
+}
+
+</table>

@@ -1,4 +1,4 @@
-﻿@model FishScale.Models.Monitoracao
+﻿
 @{
     ViewBag.Title = "Graficos";
 }
@@ -7,9 +7,6 @@
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
-    var ramUsada = (@Model.UsedRAM/@Model.TotalRAM)*100;
-    var ramLivre = 100 - ramUsada;
-
     google.charts.load('current', { 'packages': ['corechart'] });
     google.charts.setOnLoadCallback(drawChart);
 
@@ -17,8 +14,8 @@
 
         var data = google.visualization.arrayToDataTable([
             ['Task', 'Hours per Day'],
-            ['Livre', ramLivre],
-            ['Em Uso', ramUsada]
+            ['Livre', 70],
+            ['Em Uso', 30]
         ]);
 
         var options = {
@@ -36,14 +33,16 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
-    var dh= '@Model.Hora.Value.Hour'+':'+'@Model.Hora.Value.Minute'+':'+'@Model.Hora.Value.Second';
     google.charts.load('current', { 'packages': ['corechart'] });
-    google.charts.setOnLoadCallback(drawChart);
-
+    google.charts.setOnLoadCallback(drawChart);  
+       
     function drawChart() {
         var data = google.visualization.arrayToDataTable([
             ['Tempo', 'Livre', 'Usado'],
-            [dh, ramLivre, ramUsada]
+            ['2004', 30, 70],
+            ['2005', 35, 65],
+            ['2006', 40, 60],
+            ['2007', 20, 80]
         ]);
 
         var options = {

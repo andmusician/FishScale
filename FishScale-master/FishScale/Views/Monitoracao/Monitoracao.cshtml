@@ -1,0 +1,71 @@
+﻿@model IEnumerable<FishScale.Models.Monitoracao>
+
+<h3>Monitoração em Tempo Real</h3>
+<p>
+    @Html.ActionLink("Alertas em tempo real", "ObterAlertas")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MonitoraID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalRAM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalHD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsedHD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsedRAM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaquinaID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClienteID)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MonitoraID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalRAM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalHD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsedHD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsedRAM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaquinaID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClienteID)
+            </td>
+            @*<td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>*@
+        </tr>
+    }
+
+</table>
