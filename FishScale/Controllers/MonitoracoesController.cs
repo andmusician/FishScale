@@ -16,6 +16,8 @@ namespace FishScale.Controllers
     {
         private DomoticEntities db = new DomoticEntities();
 
+        public event EventHandler Event;
+
         // GET: api/Monitoracoes
         public IQueryable<Monitoracao> GetMonitoracao()
         {

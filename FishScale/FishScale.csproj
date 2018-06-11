@@ -276,6 +276,7 @@
     <Content Include="Models\RestApi.edmx.diagram">
       <DependentUpon>RestApi.edmx</DependentUpon>
     </Content>
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Properties\PublishProfiles\fishscale - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

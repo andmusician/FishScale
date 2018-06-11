@@ -40,7 +40,7 @@ namespace FishScale.Repositorio
                         TotalHD = Convert.ToDouble(reader["TotalHD"]),
                         UsedHD = Convert.ToDouble(reader["UsedHD"]),
                         UsedRAM = Convert.ToDouble(reader["UsedRAM"]),
-                        Hora = Convert.ToDateTime(reader["Hora"]),
+                        HoraMonitoracao = Convert.ToString(reader["HoraMonitoracao"]),
                         MaquinaID = Convert.ToInt32(reader["MaquinaID"]),                        
                         ClienteID = Convert.ToInt32(reader["ClienteID"])
                     };

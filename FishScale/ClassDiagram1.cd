@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="FishScale.Controllers.AlertasController">
+    <Position X="20.25" Y="9" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQAAAAAAIEAAAACAAAACAAAAAAQAAAAAA=</HashCode>
+      <FileName>Controllers\AlertasController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishScale.Controllers.ClienteController">
+    <Position X="0.5" Y="10.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAQAAAAAAAAgAAAAEAAAQ=</HashCode>
+      <FileName>Controllers\ClienteController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishScale.Controllers.GraphController">
+    <Position X="8" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Controllers\GraphController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishScale.Controllers.MaquinaController">
+    <Position X="10.5" Y="10.25" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAABBAAAQAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Controllers\MaquinaController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishScale.Controllers.MonitoracaoController">
+    <Position X="4.75" Y="10.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAUAIAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Controllers\MonitoracaoController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishScale.Controllers.MonitoracoesController">
+    <Position X="15.25" Y="9" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACAUAAAIAAAAAAAAAgAAAAAAABEAAAAAAAA=</HashCode>
+      <FileName>Controllers\MonitoracoesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishScale.Models.Cliente">
+    <Position X="20.5" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAEAAABAAAAAAAAAgAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Models\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishScale.Models.Maquina">
+    <Position X="0.5" Y="4" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAQAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Maquina.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishScale.Models.DomoticEntities">
+    <Position X="20.5" Y="0.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAQAAAI=</HashCode>
+      <FileName>Models\RestApi.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishScale.Models.Alerta">
+    <Position X="3.75" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAUAwAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Alerta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishScale.Models.Monitoracao">
+    <Position X="24" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEBAAAAEAAAAAAgAABAEAAAAAUEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Monitoracao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishScale.Repositorio.AlertaRepositorio">
+    <Position X="13.5" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAEAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositorio\AlertaRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishScale.Repositorio.ClienteRepositorio">
+    <Position X="6.75" Y="4" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAEEAAAAgAAAAAAAAAAAAAAAAAAABAQ=</HashCode>
+      <FileName>Repositorio\ClienteRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishScale.Repositorio.MaquinaRepositorio">
+    <Position X="16.5" Y="4" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAgAAACEEAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositorio\MaquinaRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishScale.Repositorio.MonitoracaoRepositorio">
+    <Position X="10" Y="4" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAEAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositorio\MonitoracaoRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Web.Mvc.Controller" Collapsed="true">
+    <Position X="6.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object">
+    <Position X="9.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Web.Http.ApiController" Collapsed="true">
+    <Position X="19" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Data.Entity.DbContext" Collapsed="true">
+    <Position X="18.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
