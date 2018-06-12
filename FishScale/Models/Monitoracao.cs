@@ -11,7 +11,7 @@ namespace FishScale.Models
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class Monitoracao
     {
         public int MonitoraID { get; set; }
@@ -22,7 +22,5 @@ namespace FishScale.Models
         public string HoraMonitoracao { get; set; }
         public Nullable<int> MaquinaID { get; set; }
         public Nullable<int> ClienteID { get; set; }
-        public double Porcentagem { get; set; }
-        
     }
 }
